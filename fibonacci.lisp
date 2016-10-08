@@ -1,0 +1,13 @@
+(defparameter *previous* '(0 0))
+(defparameter *list* ())
+(defparameter *x* 0)
+(defparameter *i* 0)
+(defun fibonacci (times) 
+	(dotimes (*i* times) 
+		(if (zerop *i*) (setq *x* 1) (setq *x* (+ (car *previous*) (cadr *previous*))))
+		(setf *previous* (cons (cadr *previous*) (cons *x* ())))
+		(setf *list* (cons *list* (cons *x* ())))
+		(print *x*)
+		
+	)
+)
