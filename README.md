@@ -2,6 +2,8 @@ SimpleAlgorithm
 ===
 
 ## Algorithms
-### 1. binary search
-### 1. fibonacci number
 ### 1. fizzbuzz
+### 2. binary search
+### 3. fibonacci number
+### 4. stack
+### 5. queue
