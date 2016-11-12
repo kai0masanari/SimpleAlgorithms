@@ -8,3 +8,4 @@ SimpleAlgorithm
 ### 4. stack
 ### 5. queue
 ### 6. bubble sort
+### 7. prime number
