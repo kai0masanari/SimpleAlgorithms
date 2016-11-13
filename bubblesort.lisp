@@ -4,6 +4,11 @@
 (defparameter *param2* 0)
 (defparameter tmp '())
 
+(defun bubblesort (val)
+	(setter val)
+	(sorting)
+)
+
 (defun setter (val)
 	(if (zerop val)
 		(print *list*)
@@ -16,8 +21,6 @@
 	(setf *list* (append *list* (list (random 100))))
 	(setter val)
 )
-
-
 
 (defun sorting ()
 	(setf *counter* 0)
@@ -37,12 +40,12 @@
 	(setf *param1* (elt *list* val))
 	(setf *param2* (elt *list* (+ val 1)))
 	(if (> *param1* *param2*)
-		(rebuild val)
+		(rebuild_list val)
 		(setf *counter* (+ *counter* 1))
 	)
 )
 
-(defun rebuild (val)
+(defun rebuild_list (val)
 	(setf  tmp '())
 	(loop for j from 0 upto (- (length *list*) 1) do
 		(cond 
@@ -50,13 +53,6 @@
 			((= j val) (setf tmp (append tmp (append (list *param2*) (list *param1*)))))	
 		)
 	)
-	(print tmp)
 	(setf *list* tmp)
 	(print *list*)
-)
-
-
-(defun bubblesort (val)
-	(setter val)
-	(sorting)
 )
