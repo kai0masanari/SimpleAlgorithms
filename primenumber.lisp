@@ -14,12 +14,13 @@
 )
 
 (defun judge (val)
-	(loop for j from 1 upto val do
+	(setq tmp_val (- val 1))
+	(loop for j from 1 upto tmp_val do
 		(if (zerop (mod val j))
 			(setf *counter* (+ *counter* 1))
 		)
 	)
-	(if (= *counter* 2)
+	(if (= *counter* 1)
 		(display val)
 		(setf *counter* 0)
 	)
